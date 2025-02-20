@@ -4,71 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News feed</title>
-    <script src="https://kit.fontawesome.com/dafd22fdc5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/news.css">
+    <script src="https://kit.fontawesome.com/dafd22fdc5.js"
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="header">
-    <div>
+    <div class="header__menu">
         <h1 class="header__title">Main</h1>
-        <div class="header__menu">
-            <button class="header__menu-button"></button>
-            <button class="header__menu-button"></button>
+        <div class="header__menu-buttons">
+            <button class="header__menu-button add">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <button class="header__menu-button search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </div>
-        <div class="header__switchers">
-            <button class="header__switcher">News</button>
-            <button class="header__switcher">For you</button>
-        </div>
+    </div>
+    <div class="header__switchers">
+        <button class="header__switcher header__switcher--selected">News <i
+                class="fa-solid fa-caret-down"></i></button>
+        <button class="header__switcher">For you</button>
     </div>
 </header>
 <main class="main">
     <section class="main__section stories">
         <div class="stories__item">
-            <img class="stories__image"/>
-            <p class="stories__creator-name"></p>
+            <div class="stories__image-border">
+                <img src="img/img.png" class="stories__image"/>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <p
+                    class="stories__creator-name stories__creator-name--highlighted center">You </p>
         </div>
-        <div class="stories__item"></div>
-        <div class="stories__item"></div>
-        <div class="stories__item"></div>
-        <div class="stories__item"></div>
+        <div class="stories__item">
+            <div class="stories__image-border">
+                <img src="img/img.png" class="stories__image"/>
+            </div>
+            <p class="stories__creator-name center">Story</p>
+        </div>
+        <div class="stories__item">
+            <div class="stories__image-border">
+                <img src="img/img.png" class="stories__image"/>
+            </div>
+            <p class="stories__creator-name center">Story</p>
+        </div>
+        <div class="stories__item">
+            <div class="stories__image-border">
+                <img src="img/img.png" class="stories__image"/>
+            </div>
+            <p class="stories__creator-name center">Story</p>
+        </div>
+        <div class="stories__item">
+            <div class="stories__image-border">
+                <img src="img/img.png" class="stories__image"/>
+            </div>
+            <p class="stories__creator-name center">Story</p>
+        </div>
     </section>
 
-    <section class="news">
+    <section class="main__section news">
         <article class="news__item">
             <div class="news__group">
-                <img class="news__group-photo"/>
-                <p class="news__group-name"></p>
-                <p class="news__date"></p>
+                <div class="news__group-info">
+                <img src="./img/kit2.jpg" class="news__group-image"
+                     alt="group photo"/>
+                <div>
+                    <p class="news__group-name bold">Котики</p>
+                    <p class="news__date">today at 12:33 pm</p>
+                </div>
+                </div>
+                <div class="news__group-menu">
+                <button
+                        class="news__group-button news__group-button--subscribe">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <button class="news__group-button news__group-button--menu">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+                </div>
             </div>
             <div class="news__content">
-                <p class="news__text"></p>
+                <p class="news__text">Вот бы это был я</p>
                 <div class="news__media">
-                    <img class="news__image"/>
+                    <img src="./img/kit.jpg" class="news__image"
+                         alt="article image"/>
                 </div>
             </div>
             <div class="news__meta">
-                <button class="news__likes">
+                <div class="news__menu">
+                <button class="news__button news__button--like">
                     <i class="fa-solid fa-heart"></i>
                     10
                 </button>
-                <button class="news__comments">
-                    <i class="fa-solid fa-message"></i>
-                    1
+                <button class="news__button news__button--comment">
+                    <i class="fa-solid fa-message"></i> 1
                 </button>
-                <button class="news__share">
-                    <i class="fa-solid fa-share"></i>
-                    1
+                <button class="news__button news__button--share">
+                    <i class="fa-solid fa-share"></i> 1
                 </button>
-                <span class="news__views">
+                </div>
+                <div class="news__views">
                     <i class="fa-solid fa-eye"></i>
-                    125
-                </span>
+                    <p>125</p>
+                </div>
+            </div>
+        </article>
+        <article class="news__item">
+            <div class="news__group">
+                <div class="news__group-info">
+                    <img src="./img/kit2.jpg" class="news__group-image"
+                         alt="group photo"/>
+                    <div>
+                        <p class="news__group-name bold">Котики</p>
+                        <p class="news__date">today at 12:33 pm</p>
+                    </div>
+                </div>
+                <div class="news__group-menu">
+                    <button
+                            class="news__group-button news__group-button--subscribe">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button class="news__group-button news__group-button--menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="news__content">
+                <p class="news__text">Вот бы это был я</p>
+                <div class="news__media">
+                    <img src="./img/kit.jpg" class="news__image"
+                         alt="article image"/>
+                </div>
+            </div>
+            <div class="news__meta">
+                <div class="news__menu">
+                    <button class="news__button news__button--like">
+                        <i class="fa-solid fa-heart"></i>
+                        10
+                    </button>
+                    <button class="news__button news__button--comment">
+                        <i class="fa-solid fa-message"></i> 1
+                    </button>
+                    <button class="news__button news__button--share">
+                        <i class="fa-solid fa-share"></i> 1
+                    </button>
+                </div>
+                <div class="news__views">
+                    <i class="fa-solid fa-eye"></i>
+                    <p>125</p>
+                </div>
             </div>
         </article>
     </section>
 </main>
 <nav class="nav">
     <ul class="nav__menu">
-        <li class="nav__menu-item">
+        <li class="nav__menu-item nav__menu-item--selected">
             <a class="nav__menu-link">
                 <i class="fa-solid fa-house"></i>
             </a>
